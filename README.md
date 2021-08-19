@@ -1,6 +1,4 @@
-# Introduccioón a las bases de datos 
-
-## Por UVEG
+# Introduccioón a las bases de datos ### (Por UVEG)
 
 **¿Qué es un dato?**
 > Son palabras y/o números que se integran entre sí para estructurar información, que queremos guardas para posteriormente consultar o realizar alguna acción con ella. 
