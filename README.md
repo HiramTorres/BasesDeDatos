@@ -129,3 +129,123 @@ Este modelos se define mediante una colección de objetos o elementos de softwar
 Con los nuevos requerimientos del *Big Data*, las bases de datos relacionales, no pueden manejar el tamaño, la complejidad de los formatos,  o la velocidad de entrega que requieren muchas aplicaciones como facebook o twitter, precisamente son estas aplicaciones las que han propiciado la aparicion de nuevos sistemas de bases de datos llamados *NoSQL*, estas bases de datos permiten dar solución a los retos de escalabilidad y rendimiento que representa el *Big data*, dicho concepto agrupa diferentes tipos de soluciones para distintos tipos de datos, desde tablas y gráficos, hasta documentos e imágenes, cualquier base de datos *NoSQL* es por definición *distribuida o escalable*. 
 
 ![img](img/modelo_no_relacional.jpg)
+
+---
+
+## Componentes del diseño de bases de datos 
+
+### Diseño de bases de datos 
+
+Los **_sistemas de información_** actuales representan el mundo real y permiten obtener información de todos los procesos que los rodean. Una ventaja de estos es que ayudan a ver el **_comportamiento_** de todo lo que existe alrededor de forma **_esquemática_**, de tal manera que, se puedan **_tomar decisiones_** o **_analizar_** la conducta de un grupo de personas, de un organización, etc.  
+
+![imag](Img/Diseño.jpg)
+
+Para ello, es importante que los encargados de examinar los datos, los procesos o las actividades sean muy analíticos para trasladarlos a los sistemas de información, esto con la finalidsad, de que no existan problemas en los **_dominios estructurales_** (**_Espacio virtual_** que puede ser **_administrado_** para proveer **_información_** con **_seguridad_*), los cuales, manejan los datos y evitan problemas en la estructura. 
+
+![img](Img/diseño.1.jpg)
+
+Cuando se habla del término **_analítica_** en el campo de los sistemas de información, se hace referencia a un conjunto de actividades de **_análisis_** que posibilitan el desarrollo de diferentes **_modelos y esquemas_** en la parte lógica (descripción de la estructura que se usa para ordenar los datos mediante la representación de esquemas), para dar lugar a la parte física (espacio de almacenamiento en donde se guarda la información de la base de datos). Esta información almacenada, es manipulada por el **_Sistema Gestor de Bases de Datos_**, también conocido como DBMS- Database Management System, por sus siglas en inglés; el cual, es un sistema informático que puede estar integrado de **_varios programas_** o funcionalidades que facilitan **_diseñar, crear, consultar o modificar_** una base de datos.
+
+![img](Img/diseño.2.jpg)
+
+--- 
+
+### Diseño lógico
+
+Los componentes del **_diseño lógico_** de una base de datos se utilizan para **_esquematizar_** el **_modelo de negocio_** (esquema o representación gráfica que contiene la estructura de los datos, sus relaciones, atributos, etc.)  que permite dar forma al **_diseño conceptual_** de la base de datos, de tal manera que, se realice el **_diseño físico_** encaminado a que el **_Sistema Gestor de Base de Datos_** pueda manipular los mismos y genere información adecuada para el usuario final.
+
+
+
+Por ejemplo, imagina que vas a crear una base de datos, primero tomas una hoja en blanco y con un lápiz formarás un diagrama que aterrice la lógica que tu mente te requiere; supongamos que quieres hacer una base de datos sencilla para crear un inventario de productos por lo que te preguntas lo siguiente: ¿qué información requiero almacenar?, ¿qué características va a tener cada dato a almacenar?, ¿qué necesito? Tal vez podrías requerir el número de producto, su descripción, la categoría, el costo, precio y número de piezas en existencia.
+
+![img](Img/diseño_logico.jpg)
+
+En este sentido, lo que haces en papel sería un **_diseño conceptual_**, el cual se puede llevar a la computadora para convertirlo en un **_esquema lógico_** que represente cómo va a funcionar y relacionarse esa información. Ahora piensa que esto podría colocarse en una hoja de cálculo en forma de tabla, con columnas o campos y en cada uno, deberás especificar el tipo de dato permitido para que se guarden consistentes y lógicos, a esto se le llama atributo. El **_atributo_** en el caso del campo o columna titulada **_número de piezas_**, obligatoriamente deberá ser **_numérico_**. Cuando creas la **_hoja de cálculo_** o **_tabla_** estás haciendo un **_diseño lógico_**, y cuando decides lo que vas a guardar en una **_carpeta compartida_** con acceso para varias personas, estás definiendo el **_espacio físico_** de almacenamiento de esa sencilla base de datos.
+
+![img](img/diseño_logico_1.jpg)
+
+---
+
+### Diseño físico 
+
+El **_diseño físico_** de las bases de datos (descripción del esquema donde físicamente residirá la base de datos) es el encargado de la **_optimización_** del rendimiento de los recursos de **_hardware_** (uso eficiente del espacio para que sea accesible la información), mediante la correcta **_aplicación_** de las **_reglas de negocio_**  (indicaciones sobre dónde debe residir, quién puede tener acceso, con qué fin, cómo y cuándo puede ser consultada o manipulada la base de datos), **_con el fin de asegurar la integridad de los datos almacenados_** (verificar que los datos sean consistentes y coherentes; por ejemplo, si el campo es numérico no debería haber caracteres como letras en este campo) y evitar repeticiones innecesarias de datos, para proveer la información adecuada al usuario, todo esto con base en un diseño lógico adecuado y eficiente.
+
+![img](img/diseño_fisico.jpg)
+
+--- 
+
+## Componentes del diseño lógico 
+
+### Modelo Entidad-Relación 
+
+El modelo de Entidad - Relación, consiste en una representación analítica de lo que se quiere almacenar en la base de datos y se encuentra compuesto por: entidades, atributos, relaciones y reglas de negocio. Todos estos elementos ayudarán al diseñador lógico a interpetar como se podrán relacionar las entidades dentro del modelo. 
+
+![img](img/entidad-relacion.jpg)
+
+
+
+* **Entidad**
+    Se deine como la representación de un objeto, proceso o concepto el mundo real que se describe en una base de datos para ser utilizada dentro de un modelado con la finalidad de brindad información sobre la entidad que se definirá. Asimismo, tienen una serie de características que definirán su estado, las cuales, son llamadas atributos. 
+
+* **Atributo** 
+    Son las características de las entidades que serán definidas den el modelo, por otra parte, son elementos que las definen y a su vez, se almacenan en el modelado. Cabe destacar, que un analista especializado puede encontrar todas estas características que definen entidades del mismo tipo, es decir, para que existan varios elementos de la misma entidad, los valores de los atributos o características tienen que ser diferentes entre sí, para poder determinar el estado de la entidad que se definirá.
+
+
+* **Relaciones**
+    Las relaciones son parte fundammental del **Modelo Entidad-Relación** y se definen como el grado de asociación entre una o varias entidades que se pueden instanciar. Así mismo, estas se pueden representar en forma de tablas para clarificar las reglas de negocio de acuerdo con el uso dque se le dará a la base de datos 
+    
+    - **Existen distintos tipos de relaciones**
+        1. _**Relación de uno a uno**_
+            Son relaciones donde se determina que una entidad se relaciona con otra, po ejemplo, una mujer s evincunla con un hombre de una relación llamada matrimonio. Es uno a auno por que un hombre solo puede estar casado con una mujer. 
+            ![img](img/1_1.jpg)
+
+
+        2. _**Relación de uno a muchos**_
+            Son relaciones donde se determina que una entidad se relaciona con muchas ebtudades de otro tipo. Por ejemplo, una empresas puede tener muchos empleados, pero, en este caso un empleado por si solo puede pertenecer a una empresa. Otro ejemplo es, que una mamá puede tener varios hijos, pero un hijo no puede tener varias mamás. 
+            ![img](img/1_n.jpg)
+
+        3. _**Relación de muchos a muchos**_ 
+            Son relaciones donde la entidad A se relaciona con miuchas entidades B y una entidad B se relaciona con muchas entidades A. Por ejemplo, un alumno se puede matricular en muchas asignaturas y una asignatura la pueden tomar muchos alumnos. 
+            ![img](img/n_m.jpg)
+
+---
+
+## Componentes del diseño físico
+![tablas](img/tablas.jpg)
+En general los compomnentes del diseño físico de las bases de datos son: 
+- **Tablas**
+    Las tablas son las que almacenan la información dentro de la base de datos. El siguiente esquema muestra tablas relacionadas, las cuales guardan información de los empleados y los proyectos en los qu participan. 
+    ![componentes](img/componentes_fisico.jpg)
+    >En este esquema se puede apreciar que cada tabla tiene un nombre y una serie de datos o campos. 
+
+- **Columnas**
+    ![columnas_representación](img/columnas.jpg)
+
+    Las columnas de la tabla son las que describen los atributos de la entidad (en un diagrama de entidad-relación), la cual se representa con una tabla.
+    En sintesis, una columna es una conjunto de datos que almacena un mismo tipo de información, esto es que las columnas identifican los atributos de las entidades. 
+    
+    ![columnas](img/columnas_1.jpg)
+
+- **Tipo de datos**
+    ![tipo_de_dato](img/tipo_de_dato.jpg)
+    Cada columna tiene un nombre y una serie de caracteristicas especificas, entre ellas el tipo de dato, el cual especifica que información puede tomar cada columna. 
+
+    El nombre de la columna y el tipo de dato son definidos por el diseñador en la base de datos, ya que al hacer el análisis, él es quien determina el tipo de información que se almacenará en es columna. 
+    Existen 2 tipos de datos: 
+    - De datos escalares
+    - De datos númericos
+    #### Datos escalares
+    Los datos escalares se refieren a un conjunto predefinido con una definición de datos especifica y se caracterizan por poder almacenar palabras o valores con los cuales no se puede hacer operaciones matemáticas, por ejemplo: 
+        1. **Booleano**: solo puede almacenar cierto o falso
+        2. **Caracter**: almacena solo un bit, es decir, un uno (1) o un cero (0), sin embargo, no se pueden realizar operaciones mátematicas con estos porque representan un valor binario. 
+
+    ![datos_escalares](img/datos_escalares.jpg)
+    #### Datos numéricos 
+    Los datos numéricos que almacenan, como su nombre lo dice, guardan valores los cuales se pueden realizar operaciones matemáticas, por ejemplo: 
+    - **Exacto:** solo almacena digitos de 0 a 9.
+    - **Aproximados:** solo almacena valores aproximados por ejemplo el valor de $\pi$ o $e$
+    - **fecha y hora**: almacena fechas, horas o ambas juntas
+     ![datos_numericos](img/datos_numericos.jpg)
+
+     
+
