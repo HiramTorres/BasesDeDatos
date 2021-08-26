@@ -248,4 +248,38 @@ En general los compomnentes del diseño físico de las bases de datos son:
      ![datos_numericos](Img/datos_numericos.jpg)
 
      
+--- 
 
+## ¿Qué son las bases de datos relacionales? 
+
+Las bases de datos relacionales fueron definidas por Edgar Frank Codd entre los años 1960 y 1970, actualmente, este modelo es de los más utilizados. 
+
+Se define como aquelllas que presentan los datos y sus relaciones entre ellos, mediante una colección de tablas que contienen un nombre úínico. La fila de la tabla representa la relación entre un conjunto de valores, que llamamos registtro o tupla. 
+
+### Estructura de datos 
+
+Dentro del modelo relacional es importante destacar que se compone de una serie de tablas que representan ciertos datos, y a su vez, la relación que existe entre ellos. 
+Las tablas se integran de columnas y filas, similares a una cuadricula. Para identificar a cada columna se le da un nombre exclusivo e irrepetible para distinguilo. 
+La estructura de datos esta compuesta por: 
+* **Dominio**
+    Dentro de las bases de datos relacionales se refiere a un conjunto de valores en las tablas que son homogéneos, est oquiere decir que en cada uno delos registros de las tablas tiene varios tipos de características, campos o atributos y esto genera un registro o tupla única dentro de esta tabla. Como podemos observar en el ejemplo, tenemos los dominios o conjuntos de: días, vocales y números primos. Los Dominios o conjuntos pueden estar compuestos de valores finitos o infinitos. La combinación de los datos hace único el registro o tupla, porque además del identificador único, es distinto desde lo minimo hasta lo más amplio, de todos los demás registros almacenados. 
+    |Días|Vocales|Números primos|
+    |--|--|--|
+    |Domingo, lunes martes miércoles jueves viernes sábado|A,E,I,O,U|1,2,3,5,7,11...|
+
+* **Atributos**
+    Equivale a una caracteristica que identifica a una entidad, y se define con base en los dominios, por ejemplo: la columna ap_trab(apellido del trabajdor) es el atrinuto, cada dato de la columna corresponde a un campo de registro o tupla y se definen sobre dominio de Apellidos. Al conjunto de atributos se le llama grado. Generalmente las columnas no se incrementan con el paso del tiempo, ya que son fijas, por lo que el Grado no cambia. 
+    En el ejemplo, la columna corresponde a un atributo de la entidad.
+    |id_trab|nom_trab|ap_trab|pto_trab|
+    |--|--|--|--|
+    |1230|Fernando|Aguilera|Electricista| 
+    |1231|Armando|Calvo|Fontanero|
+    |1232|Néstor|Marín |Carpintero|
+    |1233|Osvaldo|Perez|Albañil|
+    |1234|Juventino|Medina|Fontanero|
+    |1235|Roberto|Sánchez|Electricista|
+
+
+* **Relaciones**
+    
+* **Tuplas**
